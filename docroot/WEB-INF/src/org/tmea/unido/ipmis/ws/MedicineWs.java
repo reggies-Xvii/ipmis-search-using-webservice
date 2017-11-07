@@ -40,18 +40,6 @@ public interface MedicineWs {
     /**
      * 
      * @return
-     *     returns java.lang.String
-     */
-    @WebMethod
-    @WebResult(targetNamespace = "")
-    @RequestWrapper(localName = "getTestString", targetNamespace = "http://ws.ipmis.unido.tmea.org/", className = "org.tmea.unido.ipmis.ws.GetTestString")
-    @ResponseWrapper(localName = "getTestStringResponse", targetNamespace = "http://ws.ipmis.unido.tmea.org/", className = "org.tmea.unido.ipmis.ws.GetTestStringResponse")
-    @Action(input = "http://ws.ipmis.unido.tmea.org/MedicineWs/getTestStringRequest", output = "http://ws.ipmis.unido.tmea.org/MedicineWs/getTestStringResponse")
-    public String getTestString();
-
-    /**
-     * 
-     * @return
      *     returns java.util.List<org.tmea.unido.ipmis.ws.Medicine>
      */
     @WebMethod
@@ -60,6 +48,18 @@ public interface MedicineWs {
     @ResponseWrapper(localName = "getAllMedicineResponse", targetNamespace = "http://ws.ipmis.unido.tmea.org/", className = "org.tmea.unido.ipmis.ws.GetAllMedicineResponse")
     @Action(input = "http://ws.ipmis.unido.tmea.org/MedicineWs/getAllMedicineRequest", output = "http://ws.ipmis.unido.tmea.org/MedicineWs/getAllMedicineResponse")
     public List<Medicine> getAllMedicine();
+
+    /**
+     * 
+     * @return
+     *     returns java.lang.String
+     */
+    @WebMethod
+    @WebResult(targetNamespace = "")
+    @RequestWrapper(localName = "getTestString", targetNamespace = "http://ws.ipmis.unido.tmea.org/", className = "org.tmea.unido.ipmis.ws.GetTestString")
+    @ResponseWrapper(localName = "getTestStringResponse", targetNamespace = "http://ws.ipmis.unido.tmea.org/", className = "org.tmea.unido.ipmis.ws.GetTestStringResponse")
+    @Action(input = "http://ws.ipmis.unido.tmea.org/MedicineWs/getTestStringRequest", output = "http://ws.ipmis.unido.tmea.org/MedicineWs/getTestStringResponse")
+    public String getTestString();
 
     /**
      * 

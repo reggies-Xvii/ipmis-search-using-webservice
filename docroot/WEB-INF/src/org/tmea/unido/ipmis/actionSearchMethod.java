@@ -1,9 +1,10 @@
 package org.tmea.unido.ipmis;
 
 import java.io.IOException;
-import java.util.ArrayList;
 import java.util.List;
 
+import javax.portlet.ActionRequest;
+import javax.portlet.ActionResponse;
 import javax.portlet.PortletException;
 import javax.portlet.RenderRequest;
 import javax.portlet.RenderResponse;
@@ -14,8 +15,6 @@ import org.tmea.unido.ipmis.ws.MedicineWsService;
 
 import com.liferay.portal.kernel.util.ParamUtil;
 import com.liferay.util.bridges.mvc.MVCPortlet;
-import javax.portlet.ActionRequest;
-import javax.portlet.ActionResponse;
 
 public class actionSearchMethod extends MVCPortlet {
 
@@ -38,13 +37,9 @@ public class actionSearchMethod extends MVCPortlet {
 		String medicineSearchString = ParamUtil.getString(actionRequest, "medicine_search_string", "no search string");
 
 		MedicineWs webservice = new MedicineWsService().getMedicineWsPort();
-		List<Medicine> medicine = webservice.getSearchResult(medicineSearchString);
+		List<Medicine> medicines = webservice.getSearchResult(medicineSearchString);
 
-		// for(Medicine m2 : medicine){
-		actionRequest.setAttribute("actionSearchMethodList", medicine);
-
-		// }
-		System.out.println(">>>>>>>>>" + medicineSearchString);
+		actionRequest.setAttribute("actionSearchMethodList", medicines);
 
 		actionRequest.setAttribute("fromAction", "true");
 	}

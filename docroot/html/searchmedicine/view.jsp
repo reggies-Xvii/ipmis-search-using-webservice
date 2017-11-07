@@ -2,9 +2,8 @@
 <%@ taglib uri="http://liferay.com/tld/aui" prefix="aui" %>
 <portlet:defineObjects />
 
-This is the <b>Search Medicine</b> portlet in View mode.
 <portlet:actionURL name="actionSearchMethod" var="actionURLVar"></portlet:actionURL>
 <aui:form method="POST" action="<%=actionURLVar%>">
-<aui:input name="medicine_search_string" title="Search String" type="text"></aui:input>
+<aui:input name="medicine_search_string" type="text" label="Search Product ATC: (Search by Product Name or Generic Name)"></aui:input>
 <aui:button name="submit" type="submit" value="submit"></aui:button>
 </aui:form>

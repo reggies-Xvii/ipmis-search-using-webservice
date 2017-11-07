@@ -1,9 +1,4 @@
 <%@taglib prefix="c" uri="http://java.sun.com/jsp/jstl/core" %>
-<%@ page import="java.util.List"%>
-<%@ page import="org.tmea.unido.ipmis.ws.Medicine" %>
-<% List actionSearchMethodList = (List)session.getAttribute("actionSearchMethodList");
-   request.setAttribute("actionSearchMethodList", actionSearchMethodList);
-%>
 <!DOCTYPE html>
 <html>
 <head>
@@ -33,26 +28,34 @@
 </style>
 </head>
 <body>
-<h2>Search Results: ${actionSearchMethodList.productTradeName}</h2>
 <table id="medicines">
-  <tr>
+<tr>
     <th>Product Trade Name</th>
     <th>Generic Name</th>
-    <th>Intended Use</th>
-    <th>Local Agent</th>
     <th>Manufacturer</th>
+    <th>Country of Origin</th>
+    <th>Strength</th>
+    <th>Intended Use</th>
+    <th>ATC Code Level 4</th>
+    <th>ATC Code Level 4 Description</th>
+    <th>NFC Code</th>
+    <th>NFC Code Description</th>
   </tr>
-  <tr>
-  <td>test</td>
-<c:forEach var="actionSearchMethodList" items="${actionSearchMethodList}">
-	<td>test data</td>
-   <td>${actionSearchMethodList.productTradeName}></td>
-   <td>${actionSearchMethodList.genericName}></td>
-   <td>${actionSearchMethodList.intendedUse}></td>
-   <td>${actionSearchMethodList.localAgent}></td>
-   <td>${actionSearchMethodList.manufacturer}></td>
-</c:forEach>
-  </tr>
+    
+    <c:forEach items="${actionSearchMethodList}" var="medicines">
+        <tr>
+            <td>${medicines.productTradeName}</td>
+            <td>${medicines.genericName}</td>
+            <td>${medicines.manufacturer}</td>
+            <td>${medicines.countryOfOrigin}</td>
+            <td>${medicines.strength}</td>
+            <td>${medicines.intendedUse}</td>            
+            <td>${medicines.atcCodeLevelFour}</td>
+            <td>${medicines.atcCodeLevelFourDescription}</td>
+            <td>${medicines.nfcCodeThree}</td>
+            <td>${medicines.nfcCodeThreeDescription}</td>
+        </tr>
+    </c:forEach>
 </table>
 </body>
 </html>

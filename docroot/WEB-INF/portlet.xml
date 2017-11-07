@@ -41,7 +41,7 @@
 	<portlet>
 		<portlet-name>search-medicine</portlet-name>
 		<display-name>Search Medicine</display-name>
-		<portlet-class>org.tmea.unido.ipmis.SearchMedicine</portlet-class>
+		<portlet-class>org.tmea.unido.ipmis.actionSearchMethod</portlet-class>
 		<init-param>
 			<name>view-template</name>
 			<value>/html/searchmedicine/view.jsp</value>
