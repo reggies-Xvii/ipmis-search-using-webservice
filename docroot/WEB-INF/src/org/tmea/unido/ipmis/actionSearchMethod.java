@@ -37,9 +37,16 @@ public class actionSearchMethod extends MVCPortlet {
 		String medicineSearchString = ParamUtil.getString(actionRequest, "medicine_search_string", "no search string");
 
 		MedicineWs webservice = new MedicineWsService().getMedicineWsPort();
-		List<Medicine> medicines = webservice.getSearchResult(medicineSearchString);
+		//List<Medicine> medicines = webservice.getSearchResult(medicineSearchString);
+		List<Medicine> medicines = webservice.getSearchResultUganda(medicineSearchString);
+		List<Medicine> medicinesKe = webservice.getSearchResult(medicineSearchString);
+		List<Medicine> medicinesTz = webservice.getSearchResultTanzania(medicineSearchString);
+		
 
 		actionRequest.setAttribute("actionSearchMethodList", medicines);
+		actionRequest.setAttribute("actionSearchMethodListKe", medicinesKe);
+		actionRequest.setAttribute("actionSearchMethodListTz", medicinesTz);
+		
 
 		actionRequest.setAttribute("fromAction", "true");
 	}

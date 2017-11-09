@@ -25,6 +25,7 @@ import javax.xml.bind.annotation.XmlType;
  *         &lt;element name="atcCodeLevelTwo" type="{http://www.w3.org/2001/XMLSchema}string" minOccurs="0"/>
  *         &lt;element name="atcCodeLevelTwoDescription" type="{http://www.w3.org/2001/XMLSchema}string" minOccurs="0"/>
  *         &lt;element name="countryOfOrigin" type="{http://www.w3.org/2001/XMLSchema}string" minOccurs="0"/>
+ *         &lt;element name="countryRegistered" type="{http://www.w3.org/2001/XMLSchema}string" minOccurs="0"/>
  *         &lt;element name="genericName" type="{http://www.w3.org/2001/XMLSchema}string" minOccurs="0"/>
  *         &lt;element name="id" type="{http://www.w3.org/2001/XMLSchema}long"/>
  *         &lt;element name="intendedUse" type="{http://www.w3.org/2001/XMLSchema}string" minOccurs="0"/>
@@ -53,6 +54,7 @@ import javax.xml.bind.annotation.XmlType;
     "atcCodeLevelTwo",
     "atcCodeLevelTwoDescription",
     "countryOfOrigin",
+    "countryRegistered",
     "genericName",
     "id",
     "intendedUse",
@@ -74,6 +76,7 @@ public class Medicine {
     protected String atcCodeLevelTwo;
     protected String atcCodeLevelTwoDescription;
     protected String countryOfOrigin;
+    protected String countryRegistered;
     protected String genericName;
     protected long id;
     protected String intendedUse;
@@ -298,6 +301,30 @@ public class Medicine {
      */
     public void setCountryOfOrigin(String value) {
         this.countryOfOrigin = value;
+    }
+
+    /**
+     * Gets the value of the countryRegistered property.
+     * 
+     * @return
+     *     possible object is
+     *     {@link String }
+     *     
+     */
+    public String getCountryRegistered() {
+        return countryRegistered;
+    }
+
+    /**
+     * Sets the value of the countryRegistered property.
+     * 
+     * @param value
+     *     allowed object is
+     *     {@link String }
+     *     
+     */
+    public void setCountryRegistered(String value) {
+        this.countryRegistered = value;
     }
 
     /**

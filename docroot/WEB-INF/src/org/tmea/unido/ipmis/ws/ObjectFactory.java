@@ -24,11 +24,15 @@ import javax.xml.namespace.QName;
 @XmlRegistry
 public class ObjectFactory {
 
+    private final static QName _GetSearchResultTanzania_QNAME = new QName("http://ws.ipmis.unido.tmea.org/", "getSearchResultTanzania");
+    private final static QName _GetSearchResultUgandaResponse_QNAME = new QName("http://ws.ipmis.unido.tmea.org/", "getSearchResultUgandaResponse");
     private final static QName _GetSearchResult_QNAME = new QName("http://ws.ipmis.unido.tmea.org/", "getSearchResult");
     private final static QName _GetTestListString_QNAME = new QName("http://ws.ipmis.unido.tmea.org/", "getTestListString");
     private final static QName _GetTestStringResponse_QNAME = new QName("http://ws.ipmis.unido.tmea.org/", "getTestStringResponse");
     private final static QName _GetAllMedicine_QNAME = new QName("http://ws.ipmis.unido.tmea.org/", "getAllMedicine");
     private final static QName _GetTestListStringResponse_QNAME = new QName("http://ws.ipmis.unido.tmea.org/", "getTestListStringResponse");
+    private final static QName _GetSearchResultTanzaniaResponse_QNAME = new QName("http://ws.ipmis.unido.tmea.org/", "getSearchResultTanzaniaResponse");
+    private final static QName _GetSearchResultUganda_QNAME = new QName("http://ws.ipmis.unido.tmea.org/", "getSearchResultUganda");
     private final static QName _GetTestString_QNAME = new QName("http://ws.ipmis.unido.tmea.org/", "getTestString");
     private final static QName _GetAllMedicineResponse_QNAME = new QName("http://ws.ipmis.unido.tmea.org/", "getAllMedicineResponse");
     private final static QName _GetSearchResultResponse_QNAME = new QName("http://ws.ipmis.unido.tmea.org/", "getSearchResultResponse");
@@ -81,6 +85,38 @@ public class ObjectFactory {
     }
 
     /**
+     * Create an instance of {@link GetSearchResultTanzaniaResponse }
+     * 
+     */
+    public GetSearchResultTanzaniaResponse createGetSearchResultTanzaniaResponse() {
+        return new GetSearchResultTanzaniaResponse();
+    }
+
+    /**
+     * Create an instance of {@link GetSearchResultUganda }
+     * 
+     */
+    public GetSearchResultUganda createGetSearchResultUganda() {
+        return new GetSearchResultUganda();
+    }
+
+    /**
+     * Create an instance of {@link GetSearchResultTanzania }
+     * 
+     */
+    public GetSearchResultTanzania createGetSearchResultTanzania() {
+        return new GetSearchResultTanzania();
+    }
+
+    /**
+     * Create an instance of {@link GetSearchResultUgandaResponse }
+     * 
+     */
+    public GetSearchResultUgandaResponse createGetSearchResultUgandaResponse() {
+        return new GetSearchResultUgandaResponse();
+    }
+
+    /**
      * Create an instance of {@link GetSearchResult }
      * 
      */
@@ -110,6 +146,24 @@ public class ObjectFactory {
      */
     public Medicine createMedicine() {
         return new Medicine();
+    }
+
+    /**
+     * Create an instance of {@link JAXBElement }{@code <}{@link GetSearchResultTanzania }{@code >}}
+     * 
+     */
+    @XmlElementDecl(namespace = "http://ws.ipmis.unido.tmea.org/", name = "getSearchResultTanzania")
+    public JAXBElement<GetSearchResultTanzania> createGetSearchResultTanzania(GetSearchResultTanzania value) {
+        return new JAXBElement<GetSearchResultTanzania>(_GetSearchResultTanzania_QNAME, GetSearchResultTanzania.class, null, value);
+    }
+
+    /**
+     * Create an instance of {@link JAXBElement }{@code <}{@link GetSearchResultUgandaResponse }{@code >}}
+     * 
+     */
+    @XmlElementDecl(namespace = "http://ws.ipmis.unido.tmea.org/", name = "getSearchResultUgandaResponse")
+    public JAXBElement<GetSearchResultUgandaResponse> createGetSearchResultUgandaResponse(GetSearchResultUgandaResponse value) {
+        return new JAXBElement<GetSearchResultUgandaResponse>(_GetSearchResultUgandaResponse_QNAME, GetSearchResultUgandaResponse.class, null, value);
     }
 
     /**
@@ -155,6 +209,24 @@ public class ObjectFactory {
     @XmlElementDecl(namespace = "http://ws.ipmis.unido.tmea.org/", name = "getTestListStringResponse")
     public JAXBElement<GetTestListStringResponse> createGetTestListStringResponse(GetTestListStringResponse value) {
         return new JAXBElement<GetTestListStringResponse>(_GetTestListStringResponse_QNAME, GetTestListStringResponse.class, null, value);
+    }
+
+    /**
+     * Create an instance of {@link JAXBElement }{@code <}{@link GetSearchResultTanzaniaResponse }{@code >}}
+     * 
+     */
+    @XmlElementDecl(namespace = "http://ws.ipmis.unido.tmea.org/", name = "getSearchResultTanzaniaResponse")
+    public JAXBElement<GetSearchResultTanzaniaResponse> createGetSearchResultTanzaniaResponse(GetSearchResultTanzaniaResponse value) {
+        return new JAXBElement<GetSearchResultTanzaniaResponse>(_GetSearchResultTanzaniaResponse_QNAME, GetSearchResultTanzaniaResponse.class, null, value);
+    }
+
+    /**
+     * Create an instance of {@link JAXBElement }{@code <}{@link GetSearchResultUganda }{@code >}}
+     * 
+     */
+    @XmlElementDecl(namespace = "http://ws.ipmis.unido.tmea.org/", name = "getSearchResultUganda")
+    public JAXBElement<GetSearchResultUganda> createGetSearchResultUganda(GetSearchResultUganda value) {
+        return new JAXBElement<GetSearchResultUganda>(_GetSearchResultUganda_QNAME, GetSearchResultUganda.class, null, value);
     }
 
     /**

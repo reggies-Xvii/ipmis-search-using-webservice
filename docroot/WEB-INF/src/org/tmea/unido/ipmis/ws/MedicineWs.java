@@ -27,15 +27,33 @@ public interface MedicineWs {
 
     /**
      * 
+     * @param arg0
      * @return
-     *     returns java.util.List<java.lang.String>
+     *     returns java.util.List<org.tmea.unido.ipmis.ws.Medicine>
      */
     @WebMethod
     @WebResult(targetNamespace = "")
-    @RequestWrapper(localName = "getTestListString", targetNamespace = "http://ws.ipmis.unido.tmea.org/", className = "org.tmea.unido.ipmis.ws.GetTestListString")
-    @ResponseWrapper(localName = "getTestListStringResponse", targetNamespace = "http://ws.ipmis.unido.tmea.org/", className = "org.tmea.unido.ipmis.ws.GetTestListStringResponse")
-    @Action(input = "http://ws.ipmis.unido.tmea.org/MedicineWs/getTestListStringRequest", output = "http://ws.ipmis.unido.tmea.org/MedicineWs/getTestListStringResponse")
-    public List<String> getTestListString();
+    @RequestWrapper(localName = "getSearchResultUganda", targetNamespace = "http://ws.ipmis.unido.tmea.org/", className = "org.tmea.unido.ipmis.ws.GetSearchResultUganda")
+    @ResponseWrapper(localName = "getSearchResultUgandaResponse", targetNamespace = "http://ws.ipmis.unido.tmea.org/", className = "org.tmea.unido.ipmis.ws.GetSearchResultUgandaResponse")
+    @Action(input = "http://ws.ipmis.unido.tmea.org/MedicineWs/getSearchResultUgandaRequest", output = "http://ws.ipmis.unido.tmea.org/MedicineWs/getSearchResultUgandaResponse")
+    public List<Medicine> getSearchResultUganda(
+        @WebParam(name = "arg0", targetNamespace = "")
+        String arg0);
+
+    /**
+     * 
+     * @param arg0
+     * @return
+     *     returns java.util.List<org.tmea.unido.ipmis.ws.Medicine>
+     */
+    @WebMethod
+    @WebResult(targetNamespace = "")
+    @RequestWrapper(localName = "getSearchResultTanzania", targetNamespace = "http://ws.ipmis.unido.tmea.org/", className = "org.tmea.unido.ipmis.ws.GetSearchResultTanzania")
+    @ResponseWrapper(localName = "getSearchResultTanzaniaResponse", targetNamespace = "http://ws.ipmis.unido.tmea.org/", className = "org.tmea.unido.ipmis.ws.GetSearchResultTanzaniaResponse")
+    @Action(input = "http://ws.ipmis.unido.tmea.org/MedicineWs/getSearchResultTanzaniaRequest", output = "http://ws.ipmis.unido.tmea.org/MedicineWs/getSearchResultTanzaniaResponse")
+    public List<Medicine> getSearchResultTanzania(
+        @WebParam(name = "arg0", targetNamespace = "")
+        String arg0);
 
     /**
      * 
@@ -60,6 +78,18 @@ public interface MedicineWs {
     @ResponseWrapper(localName = "getTestStringResponse", targetNamespace = "http://ws.ipmis.unido.tmea.org/", className = "org.tmea.unido.ipmis.ws.GetTestStringResponse")
     @Action(input = "http://ws.ipmis.unido.tmea.org/MedicineWs/getTestStringRequest", output = "http://ws.ipmis.unido.tmea.org/MedicineWs/getTestStringResponse")
     public String getTestString();
+
+    /**
+     * 
+     * @return
+     *     returns java.util.List<java.lang.String>
+     */
+    @WebMethod
+    @WebResult(targetNamespace = "")
+    @RequestWrapper(localName = "getTestListString", targetNamespace = "http://ws.ipmis.unido.tmea.org/", className = "org.tmea.unido.ipmis.ws.GetTestListString")
+    @ResponseWrapper(localName = "getTestListStringResponse", targetNamespace = "http://ws.ipmis.unido.tmea.org/", className = "org.tmea.unido.ipmis.ws.GetTestListStringResponse")
+    @Action(input = "http://ws.ipmis.unido.tmea.org/MedicineWs/getTestListStringRequest", output = "http://ws.ipmis.unido.tmea.org/MedicineWs/getTestListStringResponse")
+    public List<String> getTestListString();
 
     /**
      * 
