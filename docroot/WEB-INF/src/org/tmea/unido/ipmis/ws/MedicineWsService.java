@@ -17,7 +17,7 @@ import javax.xml.ws.WebServiceFeature;
  * Generated source version: 2.2
  * 
  */
-@WebServiceClient(name = "MedicineWsService", targetNamespace = "http://ws.ipmis.unido.tmea.org/", wsdlLocation = "http://localhost:8081/ipmis/ws?wsdl")
+@WebServiceClient(name = "MedicineWsService", targetNamespace = "http://ws.ipmis.unido.tmea.org/", wsdlLocation = "http://localhost:8080/ipmis/ipmisService?wsdl")
 public class MedicineWsService
     extends Service
 {
@@ -30,7 +30,7 @@ public class MedicineWsService
         URL url = null;
         WebServiceException e = null;
         try {
-            url = new URL("http://localhost:8081/ipmis/ws?wsdl");
+            url = new URL("http://localhost:8080/ipmis/ipmisService?wsdl");
         } catch (MalformedURLException ex) {
             e = new WebServiceException(ex);
         }

@@ -1,19 +1,30 @@
+<%@ page language="java" pageEncoding="UTF-8" session="false"%>
+<%@ taglib uri="http://java.sun.com/jsp/jstl/core" prefix="c" %>
+<%@ taglib uri="http://java.sun.com/jsp/jstl/fmt" prefix="fmt" %>
+<%@ taglib uri="http://java.sun.com/jsp/jstl/functions" prefix="fn" %>
 <%@taglib prefix="c" uri="http://java.sun.com/jsp/jstl/core"%>
 <!DOCTYPE html>
 <html>
 <head>
 <style>
+#pad{
+	padding-right: 5px;
+    padding-left: 10px;
+}
 #medicines {
 	font-family: "Trebuchet MS", Arial, Helvetica, sans-serif;
 	border-collapse: collapse;
 	border-spacing: 0;
 	width: 100%;
 	border: 1px solid #ddd;
+	padding-right: 5px;
+    padding-left: 20px;
 }
 
 #medicines td, #medicines th {
 	border: 1px solid #ddd;
-	padding: 8px;
+	padding-right: 5px;
+    padding-left: 20px;
 }
 
 #medicines tr:nth-child(even) {
@@ -34,8 +45,8 @@
 </style>
 </head>
 <body>
-
-<a href="http://212.22.169.19:8080/web/ipmis/home">Back to search</a>
+<div id="pad">
+<a href="http://localhost">Back to search</a>
 
 <h2>Uganda</h2>
 	<table id="medicines">
@@ -71,7 +82,7 @@
 		
 			<c:if test="${empty actionSearchMethodList}">
 			<tr><td colspan="11" align="center">
-   						 No Search Results Found for Uganda. <a href="http://212.22.169.19:8080/web/ipmis/home">Back to search</a>
+   						 No Search Results Found for Uganda. <a href="http://localhost">Back to search</a>
    			</td></tr>
  				</c:if>
  				
@@ -116,12 +127,12 @@
 		
 			<c:if test="${empty actionSearchMethodListKe}">
 			<tr><td colspan="11" align="center">
-   						 No Search Results Found for Kenya. <a href="http://212.22.169.19:8080/web/ipmis/home">Back to search</a>
+   						 No Search Results Found for Kenya. <a href="http://localhost">Back to search</a>
    			</td></tr>
  				</c:if>				
 		
 	</table>
-<h3>Tanzania</h3>
+<h2>Tanzania</h2>
 	
 	<table id="medicines">
 		<tr>
@@ -156,7 +167,7 @@
 		
 			<c:if test="${empty actionSearchMethodListTz}">
 			<tr><td colspan="11" align="center">
-   						 No Search Results Found for Tanzania. <a href="http://212.22.169.19:8080/web/ipmis/home">Back to search</a>
+   						 No Search Results Found for Tanzania. <a href="http://localhost">Back to search</a>
    			</td></tr>
  				</c:if>
  				
@@ -166,7 +177,6 @@
 		
 	</table>
 	
-	
-	
+	</div>
 </body>
 </html>
